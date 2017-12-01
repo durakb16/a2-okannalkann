@@ -1,9 +1,3 @@
-#######################################################
-### Please ignore the lines of code in this section.
-### It loads the contents of a CSV file for you.
-### The file's name should be a2_input.csv.
-### You do not need to know how it works.
-#######################################################
 
 import csv
 
@@ -12,18 +6,43 @@ with open("a2_input.csv") as input_file:
     for row in csv.reader(input_file):
         contents = contents + [row]
 
-#######################################################
-### Do your data processing below.
-### The below code gives some examples
-### of how to access the data.
-### Print your results using the print function.
-#######################################################
 
-print("This assignment (assignment 2) hasn't been finished.")
-print("All it can do is print out the contents of a couple of cells of the file a2_input.csv:")
-print("Cell at index 0,0:")
-print(contents[0][0])
-print("Cell at index 0,1:")
-print(contents[0][1])
-print("Cell at index 1,0:")
-print(contents[1][0])
+i=0
+j=0
+
+print("""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=\"utf-8\" />
+<title> Fenerbahce Basket </title>
+    <style>
+        table, td 
+		{
+            border: 2px solid grey;
+			color:#123123;
+			font-weight:bold;
+			width:40%;					
+			height:50%; 
+			background-color:#FFFFFF		
+		}	
+		h1
+			{ 
+			color: blue;
+			font-size:1em;
+			text-align:left;
+			}
+    </style>
+</head>
+<body>""")
+print("<h1>Fenerbahçe Men Basketball Team</h1>")	
+print("<table>")
+for i in range(0,8):
+	print("<tr>")
+	for j in range(0,5):
+		print("<td>"+str(contents[i][j]) + "</td>")
+print("""</tr> 
+</table>""")
+print("""
+</body>
+</html>""")
